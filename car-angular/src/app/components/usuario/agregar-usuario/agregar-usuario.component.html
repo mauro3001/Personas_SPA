@@ -1,0 +1,82 @@
+<div class="espacio">
+    <div class="card">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1974&q=80" class="img-fluid rounded-start">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+                <div class="container">
+                    <form [formGroup]="nuevoform" class="row g-3" (ngSubmit)="postform(nuevoform.value)">
+                    <p class="estilo">Registro de Personas</p>
+                        <div class="col-md-4">
+                          <label for="nombre" class="form-label">Nombre</label>
+                          <input type="text" class="form-control" id="nombre" formControlName="nombre">
+                        </div>
+            
+                        <div class="col-md-4">
+                          <label for="apellido" class="form-label">Apellido</label>
+                          <input type="text" class="form-control" id="apellido" formControlName="apellido">
+                        </div>
+
+                        <div class="col-md-4">
+                          <label for="tipo_documento" class="form-label">Seleccione Tipo documento</label>
+                          <select class="form-select" aria-label="Default select example" type="text" id="tipo_documento" formControlName="tipo_documento">
+                            <option value=1>CC</option>
+                            <option value=2>TI</option>
+                            <option value=3>TP</option>
+                            <option value=4>RC</option>
+                            <option value=5>CE</option>
+                            <option value=6>DNI</option>
+                          </select>
+                        </div>
+
+                        <div class="col-md-4">
+                          <label for="documento" class="form-label">Documento</label>
+                          <input type="text" class="form-control" id="documento" formControlName="documento">
+                        </div>
+            
+                        <div class="col-md-4">
+                          <label for="lugar_na" class="form-label">Lugar de nacimiento</label>
+                          <input type="text" class="form-control" id="lugar_na" formControlName="lugar_na">
+                        </div>
+
+                        <div class="col-md-4">
+                          <label for="fecha_na" class="form-label">Fecha de Nacimiento</label>
+                          <input type="date" class="form-control" id="fecha_na" formControlName="fecha_na">
+                        </div>
+            
+                        
+                        <div class="col-md-4">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="email" formControlName="email">
+                        </div>
+            
+                        <div class="col-md-4">
+                            <label for="telefono" class="form-label">Telefono</label>
+                            <input type="number" class="form-control" id="telefono" formControlName="telefono">
+                        </div>
+
+                        <div class="col-md-4">
+                          <label for="lu_residencia" class="form-label">Lugar de Residencia</label>
+                          <input type="text" class="form-control" id="lu_residencia" formControlName="lu_residencia">
+                        </div>
+
+                        <div class="col-md-4">
+                          <label for="sexo" class="form-label">Seleccione Sexo</label>
+                          <select class="form-select" type="text" id="sexo" formControlName="sexo">
+                            <option value=1>M</option>
+                            <option value=2>F</option>
+                            <option value=3>Otros</option>
+                          </select>
+                        </div>
+                        
+                        <div class="d-grid gap-2 d-md-block estilos">
+                          <button type="submit" class="btn btn-success register">Registrar</button>
+                          <button type="button" class="btn btn-secondary" (click)="regresar()">Regresar</button>
+                        </div>
+                          
+                    </form>
+                    
+               
+                <body>
